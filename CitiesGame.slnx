@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CitiesGame.Core/CitiesGame.Core.csproj" />
+  <Project Path="CitiesGame.WinForms/CitiesGame.WinForms.csproj" />
+</Solution>
