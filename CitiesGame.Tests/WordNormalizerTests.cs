@@ -10,11 +10,11 @@ namespace CitiesGame.Tests
         [TestMethod]
         public void Normalize_ShouldConvertToLowercase_TrimAndReplaceYo()
         {
-            string input = "  АртЁм  ";
+            string input = "  БудЁнновск  ";
 
             string result = WordNormalizer.Normalize(input);
 
-            Assert.AreEqual("артем", result);
+            Assert.AreEqual("буденновск", result);
         }
 
         [TestMethod]

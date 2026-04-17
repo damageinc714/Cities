@@ -2,8 +2,6 @@
 {
     public static class WordNormalizer
     {
-        private static readonly HashSet<char> IgnoredLetters = new() { 'ь', 'ъ', 'ы', 'й' };
-
         public static string Normalize(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
@@ -15,17 +13,22 @@
                 .Replace('ё', 'е');
         }
 
-        public static IEnumerable<char> GetPossibleMoveLetters(string city)
+        public static List<char> GetPossibleMoveLetters(string city)
         {
+            var result = new List<char>();
             var normalized = Normalize(city);
 
             for (int i = normalized.Length - 1; i >= 0; i--)
             {
                 char ch = normalized[i];
 
-                if (!IgnoredLetters.Contains(ch))
-                    yield return ch;
+                if (ch != 'ь' && ch != 'ъ' && ch != 'ы')
+                {
+                    result.Add(ch);
+                }
             }
+
+            return result;
         }
     }
 }

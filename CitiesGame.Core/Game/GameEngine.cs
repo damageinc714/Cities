@@ -26,16 +26,6 @@ namespace CitiesGame.Core.Game
 
         public MoveResult TryMakeMove(string cityName)
         {
-            if (State.IsGameOver)
-            {
-                return new MoveResult
-                {
-                    Success = false,
-                    Message = "Игра уже завершена.",
-                    IsGameOver = true
-                };
-            }
-
             if (string.IsNullOrWhiteSpace(cityName))
             {
                 return new MoveResult
@@ -108,19 +98,15 @@ namespace CitiesGame.Core.Game
             {
                 State.IsGameOver = true;
 
-                int loser = (State.CurrentPlayerIndex + 1) % State.TotalPlayers;
-
                 return new MoveResult
                 {
                     Success = true,
                     Message = $"После города \"{cityName}\"{Environment.NewLine}не осталось доступных ходов.{Environment.NewLine}" +
-                              $"Игра закончилась ничьёй.",
+                              $"Игра завершена ничьёй.",
                     CurrentPlayerIndex = playerWhoMoved,
-                    NextPlayerIndex = loser,
+                    NextPlayerIndex = playerWhoMoved,
                     IsGameOver = true,
-                    IsDraw = false,
-                    WinnerPlayerIndex = playerWhoMoved,
-                    LoserPlayerIndex = loser
+                    IsDraw = true
                 };
             }
 
@@ -166,18 +152,6 @@ namespace CitiesGame.Core.Game
                         CurrentPlayerIndex = loser,
                         WinnerPlayerIndex = 1,
                         LoserPlayerIndex = 0,
-                        IsGameOver = true
-                    };
-                }
-                else
-                {
-                    return new MoveResult
-                    {
-                        Success = true,
-                        Message = "Компьютер сдался. Вы победили!",
-                        CurrentPlayerIndex = loser,
-                        WinnerPlayerIndex = 0,
-                        LoserPlayerIndex = 1,
                         IsGameOver = true
                     };
                 }

@@ -290,10 +290,9 @@ var assemblies = [
   {
     "name": "CitiesGame.Core",
     "classes": [
-      { "name": "CitiesGame.Core.Game.GameEngine", "rp": "CitiesGame.Core_GameEngine.html", "cl": 122, "ucl": 33, "cal": 155, "tl": 211, "cb": 26, "tb": 30, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "CitiesGame.Core.Game.GameEngine", "rp": "CitiesGame.Core_GameEngine.html", "cl": 118, "ucl": 17, "cal": 135, "tl": 185, "cb": 25, "tb": 28, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "CitiesGame.Core.Game.MoveResult", "rp": "CitiesGame.Core_MoveResult.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 18, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "CitiesGame.Core.Helpers.WordNormalizer", "rp": "CitiesGame.Core_WordNormalizer.html", "cl": 17, "ucl": 1, "cal": 18, "tl": 31, "cb": 5, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "CitiesGame.Core.Models.City", "rp": "CitiesGame.Core_City.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 11, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "CitiesGame.Core.Helpers.WordNormalizer", "rp": "CitiesGame.Core_WordNormalizer.html", "cl": 20, "ucl": 1, "cal": 21, "tl": 34, "cb": 7, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "CitiesGame.Core.Models.GameSettings", "rp": "CitiesGame.Core_GameSettings.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "CitiesGame.Core.Models.GameState", "rp": "CitiesGame.Core_GameState.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 18, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "CitiesGame.Core.Services.CityDictionary", "rp": "CitiesGame.Core_CityDictionary.html", "cl": 26, "ucl": 4, "cal": 30, "tl": 53, "cb": 7, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -313,8 +312,8 @@ var riskHotspots = [
   {
     "assembly": "CitiesGame.Core", "class": "CitiesGame.Core.Game.GameEngine", "reportPath": "CitiesGame.Core_GameEngine.html", "methodName": "TryMakeMove(System.String)", "methodShortName": "TryMakeMove(...)", "fileIndex": 0, "line": 28,
     "metrics": [
-      { "value": 21, "exceeded": false },
-      { "value": 20, "exceeded": true },
+      { "value": 18, "exceeded": false },
+      { "value": 18, "exceeded": true },
     ]},
 ];
 

@@ -10,7 +10,7 @@
         public int NextPlayerIndex { get; set; }
 
         public bool IsGameOver { get; set; }
-        public bool IsDraw { get; set; }
+        public bool IsDraw { get; set; }//ничья/не ничья
 
         public int WinnerPlayerIndex { get; set; } = -1;
         public int LoserPlayerIndex { get; set; } = -1;

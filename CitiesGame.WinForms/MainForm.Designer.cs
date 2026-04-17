@@ -85,7 +85,7 @@
             lblStatus.BorderStyle = BorderStyle.Fixed3D;
             lblStatus.Font = new Font("Cascadia Mono", 15F);
             lblStatus.ForeColor = Color.LimeGreen;
-            lblStatus.Location = new Point(336, 311);
+            lblStatus.Location = new Point(318, 311);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(182, 35);
             lblStatus.TabIndex = 4;
@@ -111,7 +111,7 @@
             btnBackToMenu.BackColor = SystemColors.ActiveCaptionText;
             btnBackToMenu.Font = new Font("Cascadia Mono", 15F, FontStyle.Regular, GraphicsUnit.Point, 204);
             btnBackToMenu.ForeColor = Color.LimeGreen;
-            btnBackToMenu.Location = new Point(625, 532);
+            btnBackToMenu.Location = new Point(687, 524);
             btnBackToMenu.Name = "btnBackToMenu";
             btnBackToMenu.Size = new Size(220, 60);
             btnBackToMenu.TabIndex = 6;
@@ -125,7 +125,7 @@
             btnAbortGame.BackColor = SystemColors.ActiveCaptionText;
             btnAbortGame.Font = new Font("Cascadia Mono", 15F);
             btnAbortGame.ForeColor = Color.LimeGreen;
-            btnAbortGame.Location = new Point(625, 457);
+            btnAbortGame.Location = new Point(687, 449);
             btnAbortGame.Name = "btnAbortGame";
             btnAbortGame.Size = new Size(220, 60);
             btnAbortGame.TabIndex = 7;
@@ -150,7 +150,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonShadow;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(865, 679);
+            ClientSize = new Size(919, 679);
             Controls.Add(txtCity);
             Controls.Add(btnAbortGame);
             Controls.Add(btnBackToMenu);
