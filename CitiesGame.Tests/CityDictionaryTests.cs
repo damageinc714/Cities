@@ -9,7 +9,7 @@ namespace CitiesGame.Tests
     [TestClass]
     public class CityDictionaryTests
     {
-        private string CreateTempCitiesFile(params string[] cities)
+        private string CreateTempCitiesFile(params string[] cities)//временный файл с городами
         {
             string path = Path.GetTempFileName();
             File.WriteAllLines(path, cities, Encoding.UTF8);
@@ -19,12 +19,7 @@ namespace CitiesGame.Tests
         [TestMethod]
         public void LoadFromFile_ShouldLoadUniqueNormalizedCities()
         {
-            string path = CreateTempCitiesFile(
-                "Москва",
-                "москва",
-                "Курск",
-                "Курск ",
-                " Артём");
+            string path = CreateTempCitiesFile("Москва","москва","Курск","Курск "," Артём");
 
             var dictionary = new CityDictionary();
 
@@ -41,11 +36,7 @@ namespace CitiesGame.Tests
         [TestMethod]
         public void GetCitiesByLetter_ShouldReturnOnlyMatchingCities()
         {
-            string path = CreateTempCitiesFile(
-                "Москва",
-                "Мурманск",
-                "Курск",
-                "Казань");
+            string path = CreateTempCitiesFile("Москва","Мурманск","Курск","Казань");
 
             var dictionary = new CityDictionary();
             dictionary.LoadFromFile(path);
@@ -62,10 +53,7 @@ namespace CitiesGame.Tests
         [TestMethod]
         public void HasUnusedCitiesByLetter_ShouldReturnFalse_WhenAllMatchingCitiesAreUsed()
         {
-            string path = CreateTempCitiesFile(
-                "Москва",
-                "Мурманск",
-                "Курск");
+            string path = CreateTempCitiesFile("Москва","Мурманск","Курск");
 
             var dictionary = new CityDictionary();
             dictionary.LoadFromFile(path);

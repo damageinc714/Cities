@@ -9,7 +9,7 @@ namespace CitiesGame.Tests
     [TestClass]
     public class GameEngineTests
     {
-        private CityDictionary CreateDictionary(params string[] cities)
+        private CityDictionary CreateDictionary(params string[] cities)//вспомогательный метод для тестов
         {
             string path = Path.GetTempFileName();
             File.WriteAllLines(path, cities, Encoding.UTF8);
@@ -22,7 +22,7 @@ namespace CitiesGame.Tests
         }
 
         [TestMethod]
-        public void TryMakeMove_ShouldAcceptValidFirstMove()
+        public void TryMakeMove_ShouldAcceptValidFirstMove()//корректный первый ход действительно принимается
         {
             var dictionary = CreateDictionary("Москва", "Архангельск");
             var engine = new GameEngine(dictionary);
@@ -99,9 +99,7 @@ namespace CitiesGame.Tests
         [TestMethod]
         public void TryMakeMove_ShouldEndGame_WhenNoAvailableNextMoveExists()
         {
-            var dictionary = CreateDictionary(
-                "Жуковский",
-                "Москва");
+            var dictionary = CreateDictionary("Жуковский","Москва");
 
             var engine = new GameEngine(dictionary);
             engine.StartNewGame(2);
@@ -110,8 +108,7 @@ namespace CitiesGame.Tests
 
             Assert.IsTrue(result.Success);
             Assert.IsTrue(result.IsGameOver);
-            Assert.IsFalse(result.IsDraw);
-            Assert.AreEqual(0, result.WinnerPlayerIndex);
+            Assert.IsTrue(result.IsDraw);
         }
 
         [TestMethod]

@@ -20,12 +20,12 @@ namespace CitiesGame.Tests
         [TestMethod]
         public void GetPossibleMoveLetters_ShouldSkipIgnoredLetters()
         {
-            string city = "Жуковский";
+            string city = "Нягань";
 
             var result = WordNormalizer.GetPossibleMoveLetters(city).ToList();
 
             CollectionAssert.AreEqual(
-                new[] { 'и', 'к', 'с', 'в', 'о', 'к', 'у', 'ж' },
+                new[] { 'н', 'а', 'г', 'я', 'н' },
                 result);
         }
     }
