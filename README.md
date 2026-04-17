@@ -23,7 +23,7 @@ Windows 11 же ставит на скачанный архив блокиров
 1. Против компьютера
 2. С другими игроками(2-4)  
 
-<img width="487" height="342" alt="image" src="https://github.com/user-attachments/assets/e5ee10c8-fae2-452f-9fa8-cd112bf445b4" />
+<img width="487" height="342" alt="image" src="https://github.com/user-attachments/assets/e5ee10c8-fae2-452f-9fa8-cd112bf445b4" />  
 
 Первый игрок должен вписать свой город, он отобразится в истории.  
 Далее наступит следующий ход другого игрока. Ему нужно назвать город который начинается на последнюю букву предыдущего города.  
